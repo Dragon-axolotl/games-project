@@ -301,10 +301,10 @@ function initCalculator(section) {
     if (first === "" || second === "" || !selectedOperation) { result.value = "Заповніть поля"; return; }
     const a = Number(first), b = Number(second);
     const answers = {
-      add: `Сумма чисел ${a} і ${b} = ${a + b}`,
-      subtract: `Різниця чисел ${a} і ${b} = ${a - b}`,
-      multiply: `Добуток чисел ${a} і ${b} = ${a * b}`,
-      divide: b === 0 ? "На 0 ділити не можна" : `Частка чисел ${a} і ${b} = ${a / b}`
+      add: a + b,
+      subtract: a - b,
+      multiply: a * b,
+      divide: b === 0 ? "Помилка" : a / b
     };
     result.value = answers[selectedOperation];
   });
